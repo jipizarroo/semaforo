@@ -36,3 +36,40 @@
     transform: rotate(360deg);
   }
 }
+
+.green{
+  height: 100px;
+  width: 100px;
+  background-color: green;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.red{
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  border-radius: 50%;
+  margin: 0 auto;
+  padding: 10px;
+}
+.yellow{
+  height: 100px;
+  width: 100px;
+  background-color: yellow;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.palito{
+  height: 50px;
+  width: 10px;
+  background: black;
+  margin: 0 auto;
+  padding: 10px;
+}
+.bodysemaforo{
+  width: 150px;
+  background-color: black;
+  margin: 0 auto;
+  padding: 5px;
+}

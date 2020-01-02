@@ -1,26 +1,50 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 
-function App() {
+
+
+const App = (props) => {
+  /*
+    const cardWidth = {
+      width: "18rem"
+    }
+    */
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <div class="container" id="semaforo">
+      <div class="row">
+        <div class="col">
+          <div className="palito"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div className="bodysemaforo">
+            <div className="red">
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div className="bodysemaforo">
+            <div className="yellow">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div className="bodysemaforo">
+            <div className="green">
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  );
+  )
 }
 
 export default App;
