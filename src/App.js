@@ -4,47 +4,58 @@ import './App.css';
 
 
 
-const App = (props) => {
-  /*
-    const cardWidth = {
-      width: "18rem"
-    }
-    */
-  return (
+class App extends React.Component {
 
-    <div class="container" id="semaforo">
-      <div class="row">
-        <div class="col">
-          <div className="palito"></div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <div className="bodysemaforo">
-            <div className="red">
-            </div>
-
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <div className="bodysemaforo">
-            <div className="yellow">
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <div className="bodysemaforo">
-            <div className="green">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
+constructor(){
+  super();
+  this.state={
+    clickedLight: null
+  }
 }
 
+  render(){
+    let redExtraClass = '';
+    if(this.state.clickedLight === 'red') redExtraClass = 'selected';
+    let yellowExtraClass = '';
+    if(this.state.clickedLight === 'yellow') yellowExtraClass = 'selected';
+    let greenExtraClass = '';
+    if(this.state.clickedLight === 'green') greenExtraClass = 'selected';
+    return (
+      <>
+      <div className="container" id="semaforo">
+        <div className="row">
+          <div className="col">
+            <div className="palito"></div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
+            <div className="bodysemaforo">
+              <div className={"red"+redExtraClass} onClick={() => this.setState({ clickedLight: 'red' })}>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
+            <div className="bodysemaforo">
+              <div className={"yellow"+yellowExtraClass} onClick={() => this.setState({ clickedLight: 'yellow' })}>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
+            <div className="bodysemaforo">
+              <div className={"green"+greenExtraClass} onClick={() => this.setState({ clickedLight: 'green' })}>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </>
+    )
+  }
+}
 export default App;
